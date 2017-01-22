@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour {
 
-    public float ballInitialVelocity = 800f;
+    public float ballInitialVelocity = 5f;
     public float sx;
     public float sy;
 
@@ -25,7 +25,7 @@ public class Ball : MonoBehaviour {
             rb.isKinematic = false;
             sx = Random.Range(0, 2) == 0 ? -1 : 1;
             sy = Random.Range(0, 2) == 0 ? -1 : 1;
-            rb.velocity = new Vector3(Random.Range(20,25) * sx, Random.Range(20, 25) * sy, 0);
+            rb.velocity = new Vector3(Random.Range(15,20) * sx, Random.Range(15, 20) * sy, 0);
             KinectManager.instance.IsFire = false;
         }
         else

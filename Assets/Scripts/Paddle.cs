@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Paddle : MonoBehaviour {
 
-    public float paddleSpeed = 2f;
+    public float paddleSpeed = 100f;
 
     private string axis;
 
@@ -24,9 +24,7 @@ public class Paddle : MonoBehaviour {
 
         if (KinectManager.instance.IsAvailable)
         {
-            print("flag 1");
             yPos = KinectManager.instance.PaddlePosition;
-            print("ypos: " + yPos);
         }
         else
         {
